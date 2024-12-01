@@ -1,0 +1,552 @@
+body{    
+    font-family: Arial;
+    text-align: center;
+    background: rgb(201,201,201);
+    background: linear-gradient(9deg, rgba(201,201,201,1) 0%, rgba(240,240,240,1) 100%);
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header > * {
+    margin: 0;
+    padding: 0;
+}
+
+body .header a {
+    color: #ffffff;
+}
+
+body .header h1 {
+    color: #ffffff;
+}
+
+header {
+    height: 50px;
+    text-align: left;
+    border-bottom: 1px solid #dee0e4;
+    background-color: black;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
+body .index {
+    padding: 100px 0 0 0;
+    width: 500px;
+    margin: 50px auto;
+    box-sizing: border-box;
+}
+
+body .index a {
+    color: #ffffff;
+}
+
+.contenido-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    background: #444;
+    border-radius: 10px;
+  }
+  
+  .carta {
+    position: relative;
+    background: #333;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    padding: 2rem;
+    color: #aaa;
+    box-shadow: 0 .25rem .25rem rgba(0,0,0,0.2),
+      0 0 1rem rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  
+  .container-img_carta {
+    margin: -2rem -2rem 1rem -2rem;
+  }
+  
+  .linea-carta {
+    opacity: 0;
+    animation: LineFadeIn .8s .8s forwards ease-in;
+  }
+  
+  .img_carta {
+    opacity: 0;
+    animation: ImageFadeIn .8s 1.4s forwards;
+  }
+  
+  .carta-titulo {
+    color: white;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+  }
+  
+  .carta-contenido {
+    margin-top: -1rem;
+    opacity: 0;
+    animation: ContentFadeIn .8s 1.6s forwards;
+  }
+  
+  .carta-svg {
+    position: absolute;
+    left: 0;
+    top: 115px;
+  }
+  
+  @keyframes LineFadeIn {
+    0% {
+      opacity: 0;
+      d: path("M 0 300 Q 0 300 0 300 Q 0 300 0 300 C 0 300 0 300 0 300 Q 0 300 0 300 ");
+      stroke: #fff;
+    }
+  
+    50% {
+      opacity: 1;
+      d: path("M 0 300 Q 50 300 100 300 Q 250 300 350 300 C 350 300 500 300 650 300 Q 750 300 800 300");
+      stroke: #888BFF;
+    }
+  
+    100% {
+      opacity: 1;
+      d: path("M -2 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 802 400");
+      stroke: #545581;
+    }
+  }
+  
+  @keyframes ContentFadeIn {
+    0% {
+      transform: translateY(-1rem);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes ImageFadeIn {
+    0% {
+      transform: translate(-.5rem, -.5rem) scale(1.05);
+      opacity: 0;
+      filter: blur(2px);
+    }
+  
+    50% {
+      opacity: 1;
+      filter: blur(2px);
+    }
+  
+    100% {
+      transform: translateY(0) scale(1.0);
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+/*REGISTRO*/
+
+.mensaje-error {
+    color: red;
+    font-weight: bold;
+}
+.mensaje-exito {
+    color: green;
+    font-weight: bold;
+}
+
+.login-registro {
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 320px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+}
+
+body.registro-body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 380px;          
+}
+
+.registro-body {
+    margin-top: 200px;
+}
+
+.head {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.head p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #706b6b;
+}
+
+.form-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px auto;
+}
+
+.form-registro input{
+    height: 25px;
+    outline: none;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.form-registro button {
+    background-color: #183153;
+    color: #ffffff;
+    font-size: 17px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.form-registro button:hover {
+    background-color: #183153d4;
+}
+
+.form-registro span {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+    color: #706b6b;
+    padding-bottom: 0;
+}
+
+.form-registro span a {
+    color: rgba(36, 36, 207, 0.671);
+    font-weight: 500;
+  }
+
+/*Iniciar Sesion */
+body .login {
+    width: 450px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+}
+
+.head h2 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #706b6b;
+}
+
+.login span{
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+    color: #706b6b;
+}
+
+.login a {
+  color: rgb(36, 36, 207, 0.671)
+}
+
+.login form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.login form input[type="text"], .login form input[type="password"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid rgb(82, 82, 82);
+    margin-bottom: 20px;
+    padding: 0 30px;
+    border-radius: 8px;
+}
+.login form button[type="submit"] {
+    width: 70%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #183153;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form button[type="submit"]:hover {
+    background-color: #183153d4;
+    transition: background-color 0.2s;
+}
+
+
+/*INICIO */
+
+.navtop {
+    margin-top: 70px;
+    background-color: #b92a2a;
+    padding: 1px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: start
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #575757; 
+    border-radius: 5px;
+}
+
+.content-inicio {
+   padding-top: 70px;
+   margin-top: 50px;
+   text-align: start;
+}
+
+.content-inicio h2 {
+  font-size:30px;
+}
+
+.content-inicio p {
+  font-size: 20px;
+}
+
+/*INFORMACION DE USUARIO */
+.perfil {
+  display: flex;
+  justify-content: center;
+}
+
+.content-perfil {
+  display: table-row;
+  width: 100%;
+    margin-top: 120px; 
+
+}
+
+.content-perfil h2 { 
+    text-align: center;
+}
+
+.content-perfil table {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-spacing: 10px;
+  }
+
+.content-perfil table   tr {
+  text-align: left;
+}
+
+table .right {
+  width: 60%;
+  text-align: start;
+}
+
+table .left {
+  width: 40%;
+  text-align: start;
+}
+
+/*INSCRIBIRSE A CURSO*/
+.inscribirse {
+  display: flex;
+  justify-content: center;
+    width: 500px;
+    margin: auto;
+    box-sizing: border-box;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+}
+
+.content-inscribirse {
+  width: 100%;
+  margin-top: 120px; 
+}
+
+.content-inscribirse form {
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+  }
+
+  .content-inscribirse label {
+    text-align: start;
+    padding-top: 15px;
+  }
+
+  .content-inscribirse select {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .content-inscribirse input {
+    padding: 5px;
+  }
+
+.content-inscribirse textarea {
+  border-radius: 5px;
+}
+
+.content-inscribirse button[type="submit"] {
+  font-size: 15px;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #183153;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.content-inscribirse button[type="submit"]:hover {
+  background-color: #183153d4;
+  transition: background-color 0.2s;
+}
+
+/*CURSOS INSCRITOS*/
+.inscrito {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.content-inscrito {
+  margin-top: 120px; 
+}
+
+.content-inscrito table {
+  width: 100%;
+  border-spacing: 10px;
+  }
+
+.content-inscrito a {
+  color: rgb(36, 36, 207, 0.671)
+}
+
+/*ACTUALIZAR*/
+.actualizar {
+  display: flex;
+  justify-content: center;
+  width: 450px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.content-actualizar form {
+  display: grid;  
+  gap: 5px;
+}
+
+  .content-actualizar label {
+    text-align: start;
+    padding-top: 15px;
+    padding-right: 5px;
+  }
+
+  .content-actualizar select {
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .content-actualizar input {
+    padding: 5px;
+  }
+
+.content-actualizar textarea {
+  border-radius: 5px;
+}
+
+.content-actualizar input[type="submit"] {
+  width: 49%;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #183153;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
+.content-actualizar input[type="submit"]:hover {
+  background-color: #183153d4;
+  transition: background-color 0.2s;
+}
+
+.content-actualizar a input {
+  width: 49%;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #183153;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+.content-actualizar a input:hover {
+  background-color: #183153d4;
+  transition: background-color 0.2s;
+}
+
